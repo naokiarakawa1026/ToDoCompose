@@ -25,7 +25,7 @@ class SharedViewModel @Inject constructor(
     val searchTextState : MutableState<String> = mutableStateOf("")
 
     private val _allTasks = MutableStateFlow<List<ToDoTask>>(emptyList())
-    private val allTasks: StateFlow<List<ToDoTask>> = _allTasks
+    val allTasks: StateFlow<List<ToDoTask>> = _allTasks
 
 
     fun getAllTasks() {
